@@ -10,12 +10,6 @@
 
 ## Future Steps
 
-### Fixes
-
-- Add label to y-axis of plot (Number of jobs).
-- Fix xlabels so you can read the entire word.
-- Add title to plot.
-
 ### Features
 
 - Be able to handle other job titles.
