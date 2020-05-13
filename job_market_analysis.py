@@ -203,6 +203,7 @@ def plot_results(data):
     df = pd.DataFrame.from_dict(data)
     axis = df.plot(kind='bar')
     axis.set_ylabel('Number of Jobs')
+    plt.xticks(rotation=45, fontsize=6)
 
     # Keep plot open for viewing.
     plt.show(block=True)
