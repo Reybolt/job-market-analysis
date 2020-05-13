@@ -201,7 +201,8 @@ def get_job_market_breakdown(data):
 def plot_results(data):
     """Plot results for visual ease."""
     df = pd.DataFrame.from_dict(data)
-    df.plot(kind='bar')
+    axis = df.plot(kind='bar')
+    axis.set_ylabel('Number of Jobs')
 
     # Keep plot open for viewing.
     plt.show(block=True)
