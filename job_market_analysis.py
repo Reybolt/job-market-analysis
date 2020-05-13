@@ -201,7 +201,12 @@ def get_job_market_breakdown(data):
 def plot_results(data):
     """Plot results for visual ease."""
     df = pd.DataFrame.from_dict(data)
-    df.plot(kind='bar')
+    axis = df.plot(kind='bar')
+    axis.set_ylabel('Number of Jobs')
+    axis.set_xlabel('Search Criteria (+: Include, -: Exclude)')
+    plt.xticks(rotation=45)
+    plt.title('Number of jobs by search criteria across Canadian cities')
+    plt.tight_layout()
 
     # Keep plot open for viewing.
     plt.show(block=True)
