@@ -2,21 +2,19 @@ package main
 
 import "fmt"
 
-func getJobBreakdown(requestPayload []map[string]interface{}) {
+type IndeedPayload struct {
+	City     string `json:"city"`
+	Province string `json:"province"`
+}
+
+func getJobBreakdown(requestPayload []IndeedPayload) {
 	fmt.Println(requestPayload)
 }
 
 func main() {
-	requestPayload := []map[string]interface{}{
-		{
-			"city":     "Ottawa",
-			"province": "ON",
-		},
-		{
-			"city":     "Vancouver",
-			"province": "BC",
-		},
-	}
+	var requestPayload []IndeedPayload
+	// TODO: Need to look at alternatives instead of append per record.
+	requestPayload = append(requestPayload, IndeedPayload{City: "Vancouver", Province: "BC"})
+	requestPayload = append(requestPayload, IndeedPayload{City: "Ottawa", Province: "ON"})
 	getJobBreakdown(requestPayload)
 }
-
