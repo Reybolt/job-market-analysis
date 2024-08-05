@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "job-market-analysis"
+version = "0.1.0"
+description = ""
+authors = ["Reybolt <reynaldoarteaga3@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+beautifulsoup4 = "4.9.0"
+bs4 = "0.0.1"
+requests = "2.23.0"
+pandas = "2.2.2"
+matplotlib = "3.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
